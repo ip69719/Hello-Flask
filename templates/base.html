@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+    <!-- https://startbootstrap.com/previews/clean-blog -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/clean-blog.min.css') }}">
     <title>Hello Flask</title>
 </head>
 <body>
 
-    <nav>
+    <nav class="navbar">
         <ul>
             <!-- 
                 calling the url_for() function that looks up the view called 'index()',
