@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" type="text/css">
     <!-- https://startbootstrap.com/previews/clean-blog -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/clean-blog.min.css') }}">
-    <title>Hello Flask</title>
+    <title>Thorin &amp; Company</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -115,6 +115,10 @@
     <!-- Custom scripts for this template. Use the url_for() function because referencing files that are within own repository -->
     <script src="{{ url_for('static', filename='js/clean-blog.min.js') }}"></script>
 
+    <!--
+    Script that will automatically grab the current year.
+    Custom script, needs to be loaded last
+    -->
     <script>
         $("#copyright").text(new Date().getFullYear());
     </script>
