@@ -1,3 +1,7 @@
 .col-md-5 img {
     width: 100%;
 }
+
+.flashes {
+    list-style-type: none;
+}
