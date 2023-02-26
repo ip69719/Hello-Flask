@@ -47,7 +47,10 @@
             {% endif %}
         </div>
 
-        <hr class="featurette-divider">
+        <!-- https://jinja.palletsprojects.com/en/3.1.x/templates/#filters -->
+        {% if loop.index != loop.length %}
+            <hr class="featurette-divider">
+        {% endif %}
 
     {% endfor %}
 
