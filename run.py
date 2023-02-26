@@ -1,4 +1,6 @@
 import os
+# import json library
+import json
 # import Flask class
 from flask import Flask, render_template
 
@@ -13,7 +15,20 @@ def index():
 
 @app.route("/about")
 def about():
-    return render_template("about.html", page_title="About", list_of_numbers=[1, 2, 3])
+    data = []
+    with open("data/company.json", "r") as json_data:
+        data = json.load(json_data)
+        """
+        page_title variable used to display page title.
+        <h2>{{ page_title }}</h2>
+        set data on server-side and get it to come through onto the 
+        client-side.
+
+        company=data This is assigning a new variable called 'company'
+        that will be sent through to the HTML template, which is equal to the
+        list of data it's loading from the JSON file.
+        """
+    return render_template("about.html", page_title="About", company=data)
 
 
 @app.route("/contact")
