@@ -18,18 +18,33 @@
     -->
     {% for member in company %}
         <div class="row featurette">
-            <div class="col-md-7">
-                <!--
-                    'member' references the 'member' variable from the loop, and grabs the contents
-                    of the 'name' key from our JSON file
-                -->
-                <h3>{{ member.name}}</h3>
-                <!-- corresponds to the 'description' key from our JSON file -->
-                <p>{{ member.description}}</p>
-            </div>
-            <div class="col-md-5">
-                <img src=" {{ member.image_source}} " alt="" class="featurette-image image-responsive">
-            </div>
+            {% if loop.index % 2 != 0 %}
+                <div class="col-md-7">
+                    <!--
+                        'member' references the 'member' variable from the loop, and grabs the contents
+                        of the 'name' key from our JSON file
+                    -->
+                    <h3> {{ loop.index }}. {{ member.name}}</h3>
+                    <!-- corresponds to the 'description' key from our JSON file -->
+                    <p>{{ member.description}}</p>
+                </div>
+                <div class="col-md-5">
+                    <img src=" {{ member.image_source}} " alt="" class="featurette-image image-responsive">
+                </div>
+            {% else %}
+                <div class="col-md-5">
+                    <img src=" {{ member.image_source}} " alt="" class="featurette-image image-responsive">
+                </div>
+                <div class="col-md-7">
+                    <!--
+                        'member' references the 'member' variable from the loop, and grabs the contents
+                        of the 'name' key from our JSON file
+                    -->
+                    <h3> {{ loop.index }}. {{ member.name}}</h3>
+                    <!-- corresponds to the 'description' key from our JSON file -->
+                    <p>{{ member.description}}</p>
+                </div>
+            {% endif %}
         </div>
 
         <hr class="featurette-divider">
