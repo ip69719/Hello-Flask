@@ -31,6 +31,24 @@ def about():
     return render_template("about.html", page_title="About", company=data)
 
 
+@app.route("/about/<member_name>")
+# The angle brackets will pass in data from the URL path into the view below
+def about_member(member_name):
+    """
+    When user clicks on the title, or the name of one of the characters, the
+    function brings user to a page that displays more information about that
+    character.
+    """
+    # This takes member_name from above as an argument
+    member = {}
+    with open("data/company.json", "r") as json_data:
+        data = json.load(json_data)
+        for obj in data:
+            if obj["url"] == member_name:
+                member = obj
+    return render_template("member.html", member=member)
+
+
 @app.route("/contact")
 def contact():
     return render_template("contact.html", page_title="Contact")

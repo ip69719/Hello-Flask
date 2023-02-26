@@ -24,7 +24,7 @@
                         'member' references the 'member' variable from the loop, and grabs the contents
                         of the 'name' key from our JSON file
                     -->
-                    <h3> {{ loop.index }}. {{ member.name}}</h3>
+                    <h3><a href="/about/{{ member.url }}"> {{ loop.index }}. {{ member.name}} </a></h3>
                     <!-- corresponds to the 'description' key from our JSON file -->
                     <p>{{ member.description}}</p>
                 </div>
@@ -40,7 +40,7 @@
                         'member' references the 'member' variable from the loop, and grabs the contents
                         of the 'name' key from our JSON file
                     -->
-                    <h3> {{ loop.index }}. {{ member.name}}</h3>
+                    <h3><a href="/about/{{ member.url }}"> {{ loop.index }}. {{ member.name}} </a></h3>
                     <!-- corresponds to the 'description' key from our JSON file -->
                     <p>{{ member.description}}</p>
                 </div>
