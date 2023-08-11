@@ -1,6 +1,6 @@
 # Thorin and Company (Code Institute walkthrough project)
 
-[Link to the live project](https://thorin-and-company-flask-ip.herokuapp.com/)
+[Link to the live project]()
 
 ## Project Overview
 
